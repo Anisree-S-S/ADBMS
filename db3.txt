@@ -1,0 +1,56 @@
+create tables  students,staff,department,company,employees
+
+
+create table department(dept_id varchar(30) primary key,name varchar(30));
+create table students(stud_id varchar(20) primary key,name varchar(30),class varchar(30),city varchar(30),total_marks int,percentage int,dept_id references department(dept_id));
+create table staffs(staff_id varchar(30) primary key,name varchar(30),dept_id references department(dept_id),designation varchar(30),salary int,city varchar(30));
+create table employees(empp_id varchar(30) primary key,name varchar(30),comp_id references company(comp_id),designation varchar(30),salary int,city varchar(30));
+create table company(comp_id varchar(30) primary key,name varchar(30)not null,city varchar(30),no_of_emp int);
+
+
+
+
+SQL> desc students;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ---------------------------
+ STUD_ID                                   NOT NULL VARCHAR2(20)
+ NAME                                               VARCHAR2(30)
+ CLASS                                              VARCHAR2(30)
+ CITY                                               VARCHAR2(30)
+ TOTAL_MARKS                                        NUMBER(38)
+ PERCENTAGE                                         NUMBER(38)
+ DEPT_ID                                            VARCHAR2(30)
+
+SQL> desc staffs;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ---------------------------
+ STAFF_ID                                  NOT NULL VARCHAR2(30)
+ NAME                                               VARCHAR2(30)
+ DEPT_ID                                            VARCHAR2(30)
+ DESIGNATION                                        VARCHAR2(30)
+ SALARY                                             NUMBER(38)
+ CITY                                               VARCHAR2(30)
+
+SQL> desc department;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ---------------------------
+ DEPT_ID                                   NOT NULL VARCHAR2(30)
+ NAME                                               VARCHAR2(30)
+
+SQL> desc company;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ---------------------------
+ COMP_ID                                   NOT NULL VARCHAR2(30)
+ NAME                                      NOT NULL VARCHAR2(30)
+ CITY                                               VARCHAR2(30)
+ NO_OF_EMP                                          NUMBER(38)
+
+SQL> desc employees
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ---------------------------
+ EMPP_ID                                   NOT NULL VARCHAR2(30)
+ NAME                                               VARCHAR2(30)
+ COMP_ID                                            VARCHAR2(30)
+ DESIGNATION                                        VARCHAR2(30)
+ SALARY                                             NUMBER(38)
+ CITY                                               VARCHAR2(30)
