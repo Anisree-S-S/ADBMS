@@ -1,0 +1,9 @@
+create table studentz(studid varchar(5) primary key,name varchar(15),class varchar(15),city varchar(15),total_mark float(5),percentage float(5),dept_id varchar(5) references department(dept_id));
+
+ create table department(dept_id varchar(5) primary key,name varchar(10));
+
+ create table staffs(staff_id varchar(5) primary key,sname varchar(10),dept_id varchar(5) references department(dept_id),designation varchar(10),salary float(5),city varchar(10);
+
+ create table company(comp_id varchar(5) primary key,name varchar(10) not null, city varchar(10),no_of_employee number(5));
+
+ create table employee(emp_id varchar(5) primary key,name varchar(10),comp_id varchar(5) references company(comp_id),designation varchar(10),salary float(5),city varchar(10));
