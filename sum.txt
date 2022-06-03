@@ -1,0 +1,14 @@
+SET SERVEROUTPUT ON
+BEGIN
+DECLARE
+A number(5);
+B number(5);
+C number(5);
+BEGIN
+A:=&A;
+B:=&B;
+c:=A+B;
+DBMS_OUTPUT.PUT_LINE('SUM'||C);
+END;
+END;
+/
