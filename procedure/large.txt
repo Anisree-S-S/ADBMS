@@ -1,0 +1,10 @@
+create or replace procedure largest(a number,b number)is
+BEGIN
+if(a>b)
+then
+DBMS_OUTPUT.PUT_LINE(a||' is large');
+else
+DBMS_OUTPUT.PUT_LINE(b||' is large');
+END IF;
+END;
+/
