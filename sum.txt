@@ -8,7 +8,7 @@ BEGIN
 A:=&A;
 B:=&B;
 c:=A+B;
-DBMS_OUTPUT.PUT_LINE('SUM'||C);
+DBMS_OUTPUT.PUT_LINE('SUM '||C);
 END;
 END;
 /
